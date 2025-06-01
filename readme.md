@@ -41,6 +41,8 @@ npm run dev
 
 ## Testing with curl
 
+Sample files are availale under /test folder 
+
 ### Option 1: File Upload
 
 ```bash

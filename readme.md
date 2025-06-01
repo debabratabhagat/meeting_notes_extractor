@@ -2,6 +2,8 @@
 
 A Node.js backend service that processes meeting notes using Google's Gemini AI to extract summaries, key decisions, and action items.
 
+Current node version
+
 ```bash
 node --version
 v22.14.0
@@ -87,7 +89,7 @@ curl -F "file=@test\file_1.txt" -X POST http://localhost:3000/process-meeting
 1. Set method to `POST`
 2. URL: `http://localhost:3000/process-meeting`
 3. Go to Body → raw → JSON
-4. Enter: `{"file": "Your meeting notes here..."}`
+4. Enter: `{"file": "Team Sync – May 26 We’ll launch the new product on June 10.Ravi to prepare onboarding docs by June 5.Priya ill follow up with logistics team on packaging delay.- Beta users requested a mobile-first dashboard."}`
 5. Send request
 
 ## Sample Files

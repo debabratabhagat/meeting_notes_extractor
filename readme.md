@@ -102,6 +102,82 @@ Use the provided sample files, under test folder:
 - `file_1.txt` 
 - `file_2.txt`
 
+## Sample Outputs
+
+- Input 
+```
+Team Sync – June 9
+
+ The team is set to launch the new product on June 10, with preparations actively underway. Ravi is responsible for preparing onboarding documentation by June 5, while Priya will follow up with the logistics team regarding a packaging delay. Beta users have requested a mobile-first dashboard, prompting Sarah to coordinate with the design team to develop mobile mockups. The marketing team requires final assets by June 8 to support launch activities. A decision was made to postpone feature X to the next release. Additionally, an all-hands meeting is scheduled for June 12 to celebrate the successful launch.
+ ```
+- Ouptut
+```Json
+{
+    "summary": "Team is preparing for the new product launch on June 10. Onboarding documentation is underway, logistics are being checked, mobile mockups are being developed, and marketing assets are required. Feature X is postponed, and a celebration is planned for June 12.",
+    "decisions": [
+        "Postpone feature X to the next release"
+    ],
+    "actionItems": [
+        {
+            "task": "Prepare onboarding documentation",
+            "owner": "Ravi",
+            "due": "June 5"
+        },
+        {
+            "task": "Follow up with the logistics team regarding a packaging delay",
+            "owner": "Priya",
+            "due": "NULL"
+        },
+        {
+            "task": "Coordinate with the design team to develop mobile mockups",
+            "owner": "Sarah",
+            "due": "NULL"
+        },
+        {
+            "task": "Provide final assets to the marketing team",
+            "owner": "NULL",
+            "due": "June 8"
+        }
+    ]
+}
+```
+-Input
+```
+Team Sync – June 2
+
+The Q2 Project Review Meeting held on June 1, 2024, confirmed successful completion of Q1 goals and approval of the Q2 budget. Key priorities include addressing performance issues in module B and hiring two developers by July. The team decided to allocate 40% of the budget to performance optimization and implement a new testing framework next sprint. Weekly client check-ins will start immediately, with specific action items assigned to each team member to support these initiatives.
+```
+- Output
+  ```Json
+  {
+    "summary": "Q2 Project Review confirmed Q1 goals completion and approved the Q2 budget. Key priorities include addressing module B performance and hiring two developers. Budget allocation of 40% to performance optimization and implementing a new testing framework. Weekly client check-ins to start immediately.",
+    "decisions": [
+        "Confirmed successful completion of Q1 goals.",
+        "Approved Q2 budget.",
+        "Allocate 40% of budget to performance optimization.",
+        "Implement new testing framework next sprint.",
+        "Start weekly client check-ins immediately."
+    ],
+    "actionItems": [
+        {
+            "task": "Address performance issues in module B",
+            "owner": "Team",
+            "due": "NULL"
+        },
+        {
+            "task": "Hire two developers",
+            "owner": "Team",
+            "due": "July"
+        },
+        {
+            "task": "Support initiatives",
+            "owner": "Each team member",
+            "due": "NULL"
+        }
+    ]
+}
+  ```
+
 ## Features
 
 - File upload validation (txt files only)

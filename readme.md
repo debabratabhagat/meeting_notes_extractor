@@ -39,19 +39,7 @@ npm run dev
 ### Option 1: File Upload
 
 ```bash
-# Upload sample meeting file
-curl -F "file=@test\file_1.txt" http://localhost:3000/process-meeting
-```
-
-### Option 2: Raw Text Body
-
-```bash
-# Send raw text in JSON body
-curl -X POST http://localhost:3000/process-meeting \
-  -H "Content-Type: application/json" \
-  -d '{
-    "text": "Team Sync – May 26\n- We will launch the new product on June 10.\n- Ravi to prepare onboarding docs by June 5.\n- Priya will follow up with logistics team on packaging delay."
-  }'
+curl -F "file=@test\file_1.txt" -X POST http://localhost:3000/process-meeting
 ```
 
 ### Expected Response Format:

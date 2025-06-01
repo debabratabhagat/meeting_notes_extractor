@@ -71,6 +71,8 @@ server.post(
       } catch (parseError) {
         throw new Error("Failed to parse response:", parseError);
       }
+      const time = new Date().toDateString();
+      console.log(`LOG: File processed at - ${time}`);
       return res.status(200).send(parsedResponse);
     } catch (error) {
       if (req.timedout) {
@@ -146,7 +148,6 @@ server.post(
 );
 
 server.use((error, req, res, next) => {
-  console.log(error);
   if (error instanceof multer.MulterError) {
     if (error.code === "File type mismatch") {
       return res.status(400).send({
@@ -161,7 +162,12 @@ server.use((error, req, res, next) => {
       message: "Check your internet connection",
     });
   }
-
+  if (error.status == 400) {
+    return res.status(400).send({
+      error: "Input Error",
+      message: `Check your Input:${error.message}`,
+    });
+  }
   return res.status(500).json({ error: "Internal server error" });
 });
 

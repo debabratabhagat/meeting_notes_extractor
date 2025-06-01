@@ -46,7 +46,6 @@ server.post(
   haltOnTimedout,
   async (req, res) => {
     try {
-      // const filecontent = req.file.buffer.toString("utf-8");
       let filecontent = "";
 
       if (req.file) {
@@ -148,11 +147,18 @@ server.post(
 );
 
 server.use((error, req, res, next) => {
+  // console.log(error);
   if (error instanceof multer.MulterError) {
     if (error.code === "File type mismatch") {
       return res.status(400).send({
         error: "Invalid file type",
         message: "The provided file must be of .txt format",
+      });
+    }
+    if (error.code === "LIMIT_UNEXPECTED_FILE") {
+      return res.status(400).send({
+        error: "Invalid input",
+        message: "Check the key provided",
       });
     }
   }

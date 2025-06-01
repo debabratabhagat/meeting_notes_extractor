@@ -96,8 +96,8 @@ curl -F "file=@test\file_1.txt" -X POST http://localhost:3000/process-meeting
 
 Use the provided sample files, under test folder:
 
-- `file_1.txt` - Product launch meeting
-- `file_2.txt` - Project review meeting
+- `file_1.txt` 
+- `file_2.txt`
 
 ## Features
 

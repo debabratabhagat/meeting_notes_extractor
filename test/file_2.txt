@@ -1,6 +1,3 @@
 Team Sync – June 2
 
-- Marketing campaign starts June 15.
--Anil to finalize the budget by June 8.
--Neha to coordinate with design for updated UI assets.
--Customer support needs training on new features next week.
+The Q2 Project Review Meeting held on June 1, 2024, confirmed successful completion of Q1 goals and approval of the Q2 budget. Key priorities include addressing performance issues in module B and hiring two developers by July. The team decided to allocate 40% of the budget to performance optimization and implement a new testing framework next sprint. Weekly client check-ins will start immediately, with specific action items assigned to each team member to support these initiatives.

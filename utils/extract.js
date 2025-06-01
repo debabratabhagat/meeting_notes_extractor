@@ -15,7 +15,9 @@ const get_num_tokens = async (meetingNotes) => {
       contents: `Parse these meeting notes and extract key information: 
     Meeting Notes:
     ${meetingNotes}
-    incase any property of actionItems is missing return NULL`,
+    generate a short summary,
+    incase any property of actionItems is missing return NULL,
+    add the key decisions in decision property`,
       config: {
         responseMimeType: "application/json",
         responseSchema: {
@@ -74,7 +76,9 @@ async function parseMeetingNotes(meetingNotes) {
       contents: `Parse these meeting notes and extract key information: 
     Meeting Notes:
     ${meetingNotes}
-    incase any property of actionItems is missing return NULL, add the key decisions in decision property`,
+    generate a short summary,
+    incase any property of actionItems is missing return NULL,
+    add the key decisions in decision property`,
       config: {
         responseMimeType: "application/json",
         responseSchema: {

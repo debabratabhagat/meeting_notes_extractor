@@ -82,9 +82,10 @@ curl -F "file=@test\file_1.txt" -X POST http://localhost:3000/process-meeting
 1. Set method to `POST`
 2. URL: `http://localhost:3000/process-meeting`
 3. Go to Body → form-data
-4. Key: `file` (select File type)
-5. Value: Upload your `.txt` file
-6. Send request
+4. Enter Key: `file`
+5. Select file type
+6. Value: Upload your `.txt` file
+7. Send request
 
 ### Raw Text Method:
 

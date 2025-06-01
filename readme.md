@@ -2,6 +2,10 @@
 
 A Node.js backend service that processes meeting notes using Google's Gemini AI to extract summaries, key decisions, and action items.
 
+```bash
+node --version
+v22.14.0
+```
 ## Setup
 
 1. Install dependencies:

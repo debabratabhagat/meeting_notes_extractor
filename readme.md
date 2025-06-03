@@ -17,7 +17,6 @@ v22.14.0
 npm install
 ```
 
-The .env file is provided for this submission only.
 Follow the below steps if you want to use your own gemini api key.
 
 2. Create a `.env` file:
